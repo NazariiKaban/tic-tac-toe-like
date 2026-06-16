@@ -1,0 +1,13 @@
+{
+  "mappings": "AAAA;;;;;;;;;AAYA;;;;;AAKA;;;;;;;AAOA;;;;;;;AAOA;;;;AAIA;;;;AAIA;;;;AAIA;;;;AAIA;;;;AAIA;;;;AAIA;;;;AAIA;;;;AAIA",
+  "sources": [
+    "src/styles/blocks/game.css"
+  ],
+  "sourcesContent": [
+    ".game {\n  --cell-size: 80px;\n  --player-size: calc(0.8 * $cell-size);\n  --player-position: calc(\n    ($cell-size - #{$player-size}) / 2\n    );\n\n  position: relative;\n  width: calc(3 * $cell-size);\n  border: 2px solid #000;\n}\n\n.game__field {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.game__cell {\n  box-sizing: border-box;\n  width: $cell-size;\n  height: $cell-size;\n  border: 1px dashed #000;\n}\n\n.game__player {\n  position: absolute;\n  width: #{$player-size};\n  height: #{$player-size};\n  border-radius: 50%;\n}\n\n.game__player--color--red {\n  background-color: red;\n}\n\n.game__player--color--yellow {\n  background-color: yellow;\n}\n\n.game__player--color--pink {\n  background-color: pink;\n}\n\n.game__player--x--1 {\n  left: #{$player-position};\n}\n\n.game__player--x--2 {\n  left: calc($cell-size + #{$player-position});\n}\n\n.game__player--x--3 {\n  left: calc(2 * $cell-size + #{$player-position});\n}\n\n.game__player--y--1 {\n  top: #{$player-position};\n}\n\n.game__player--y--2 {\n  top: calc($cell-size + #{$player-position});;\n}\n\n.game__player--y--3 {\n  top: calc(2 * $cell-size + #{$player-position});\n}"
+  ],
+  "names": [],
+  "version": 3,
+  "file": "tic-tac-toe-like.3b8f328d.css.map",
+  "sourceRoot": "/__parcel_source_root/"
+}

@@ -1,0 +1,64 @@
+$cell-size: 80px;
+$player-size: 0.8 * $cell-size;
+$player-position: ($cell-size - $player-size) / 2;
+
+.game {
+  position: relative;
+  width: calc(3 * #{$cell-size});
+  border: 2px solid #000;
+}
+
+.game__field {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game__cell {
+  box-sizing: border-box;
+  width: #{$cell-size};
+  height: #{$cell-size};
+  border: 1px dashed #000;
+}
+
+.game__player {
+  position: absolute;
+  width: #{$player-size};
+  height: #{$player-size};
+  border-radius: 50%;
+}
+
+.game__player--color--red {
+  background-color: red;
+}
+
+.game__player--color--yellow {
+  background-color: yellow;
+}
+
+.game__player--color--pink {
+  background-color: pink;
+}
+
+.game__player--x--1 {
+  left: #{$player-position};
+}
+
+.game__player--x--2 {
+  left: calc(#{$cell-size} + #{$player-position});
+}
+
+.game__player--x--3 {
+  left: calc(2 * #{$cell-size} + #{$player-position});
+}
+
+.game__player--y--1 {
+  top: #{$player-position};
+}
+
+.game__player--y--2 {
+  top: calc(#{$cell-size} + #{$player-position});
+}
+
+.game__player--y--3 {
+  top: calc(2 * #{$cell-size} + #{$player-position});
+}
