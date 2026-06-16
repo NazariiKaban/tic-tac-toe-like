@@ -1,0 +1,62 @@
+.game {
+  position: relative;
+  width: calc(3 * 80px);
+  border: 2px solid #000;
+}
+
+.game__field {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game__cell {
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  border: 1px dashed #000;
+}
+
+.game__player {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.game__player--color--red {
+  background-color: red;
+}
+
+.game__player--color--yellow {
+  background-color: yellow;
+}
+
+.game__player--color--pink {
+  background-color: pink;
+}
+
+.game__player--x--1 {
+  left: 8px;
+}
+
+.game__player--x--2 {
+  left: calc(80px + 8px);
+}
+
+.game__player--x--3 {
+  left: calc(2 * 80px + 8px);
+}
+
+.game__player--y--1 {
+  top: 8px;
+}
+
+.game__player--y--2 {
+  top: calc(80px + 8px);
+}
+
+.game__player--y--3 {
+  top: calc(2 * 80px + 8px);
+}
+
+/*# sourceMappingURL=style.css.map */
