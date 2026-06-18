@@ -1,6 +1,6 @@
 .game {
   border: 2px solid #000;
-  width: 240px;
+  width: 600px;
   position: relative;
 }
 
@@ -12,14 +12,14 @@
 .game__cell {
   box-sizing: border-box;
   border: 1px dashed #000;
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
 }
 
 .game__player {
   border-radius: 50%;
-  width: 64px;
-  height: 64px;
+  width: 160px;
+  height: 160px;
   position: absolute;
 }
 
@@ -31,31 +31,39 @@
   background-color: #ff0;
 }
 
+.game__player--color--blue {
+  background-color: #00f;
+}
+
+.game__player--color--green {
+  background-color: green;
+}
+
 .game__player--color--pink {
   background-color: pink;
 }
 
-.game__player--x--1 {
-  left: 8px;
-}
-
-.game__player--x--2 {
-  left: 88px;
-}
-
-.game__player--x--3 {
-  left: 168px;
-}
-
 .game__player--y--1 {
-  top: 8px;
+  top: 20px;
 }
 
 .game__player--y--2 {
-  top: 88px;
+  top: 220px;
 }
 
 .game__player--y--3 {
-  top: 168px;
+  top: 420px;
+}
+
+.game__player--x--1 {
+  left: 20px;
+}
+
+.game__player--x--2 {
+  left: 220px;
+}
+
+.game__player--x--3 {
+  left: 420px;
 }
 /*# sourceMappingURL=tic-tac-toe-like.4ee4707b.css.map */

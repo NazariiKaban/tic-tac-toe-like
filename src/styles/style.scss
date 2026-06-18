@@ -1,4 +1,4 @@
-$cell-size: 80px;
+$cell-size: 200px;
 $player-size: 0.8 * $cell-size;
 $player-position: ($cell-size - $player-size) / 2;
 
@@ -24,40 +24,28 @@ $player-position: ($cell-size - $player-size) / 2;
     height: #{$player-size};
     border-radius: 50%;
 
-    &--color--red {
-      background-color: red;
+    $colors: red, yellow, blue, green, pink;
+
+    @each $color in $colors {
+      &--color--#{$color} {
+        background-color: $color;
+      }
     }
 
-    &--color--yellow {
-      background-color: yellow;
+    @function currentPosition($vertical, $size, $base-shift) {
+      @return ($vertical - 1) * $size + $base-shift;
     }
 
-    &--color--pink {
-      background-color: pink;
+    @for $row from 1 through 3 {
+      &--y--#{$row} {
+        top: currentPosition($row, $cell-size, $player-position);
+      }
     }
 
-    &--x--1 {
-      left: #{$player-position};
-    }
-
-    &--x--2 {
-      left: calc(#{$cell-size} + #{$player-position});
-    }
-
-    &--x--3 {
-      left: calc(2 * #{$cell-size} + #{$player-position});
-    }
-
-    &--y--1 {
-      top: #{$player-position};
-    }
-
-    &--y--2 {
-      top: calc(#{$cell-size} + #{$player-position});
-    }
-
-    &--y--3 {
-      top: calc(2 * #{$cell-size} + #{$player-position});
+    @for $column from 1 through 3 {
+      &--x--#{$column} {
+        left: currentPosition($column, $cell-size, $player-position);
+      }
     }
   }
 }
