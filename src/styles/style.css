@@ -1,6 +1,6 @@
 .game {
   position: relative;
-  width: calc(3 * 80px);
+  width: calc(3 * 200px);
   border: 2px solid #000;
 }
 .game__field {
@@ -9,14 +9,14 @@
 }
 .game__cell {
   box-sizing: border-box;
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   border: 1px dashed #000;
 }
 .game__player {
   position: absolute;
-  width: 64px;
-  height: 64px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
 }
 .game__player--color--red {
@@ -25,26 +25,32 @@
 .game__player--color--yellow {
   background-color: yellow;
 }
+.game__player--color--blue {
+  background-color: blue;
+}
+.game__player--color--green {
+  background-color: green;
+}
 .game__player--color--pink {
   background-color: pink;
 }
-.game__player--x--1 {
-  left: 8px;
-}
-.game__player--x--2 {
-  left: calc(80px + 8px);
-}
-.game__player--x--3 {
-  left: calc(2 * 80px + 8px);
-}
 .game__player--y--1 {
-  top: 8px;
+  top: 20px;
 }
 .game__player--y--2 {
-  top: calc(80px + 8px);
+  top: 220px;
 }
 .game__player--y--3 {
-  top: calc(2 * 80px + 8px);
+  top: 420px;
+}
+.game__player--x--1 {
+  left: 20px;
+}
+.game__player--x--2 {
+  left: 220px;
+}
+.game__player--x--3 {
+  left: 420px;
 }
 
 /*# sourceMappingURL=style.css.map */
